@@ -9,7 +9,7 @@ Use `make install` in the current directory.
 
 Then, use the binary as follows :
 
-`sprite_cutter [Source sheet] [Size of the cells]`
+`./sprite_cutter [Source sheet] [Size of the cells]`
 
 The source sheet is the sprite sheet to cut from.
 
