@@ -18,7 +18,7 @@ int main(int argc, char* argv[]){
 
   int cut_size = atoi(argv[2]);
   int surface = width * height;
-  int nb_cuts = height / cut_size;
+  int nb_cuts = width / cut_size;
 
   printf("Loaded the sprite sheet successfully\n");
   printf("Informations : \n");
