@@ -57,25 +57,5 @@ int main(int argc, char* argv[]){
   }
   free(tile);
 
-  /*unsigned char* recopie = malloc(height * width * sizeof(unsigned char)*bpp);
-  for(int i = 0; i < height; i++)
-  {
-    for(int j = 0; j < width*bpp; j++){
-      *(recopie + j * sizeof(unsigned char) + i * width * bpp) = *(image_or + j * sizeof(unsigned char) + i * width * bpp);
-    }
-  }
-
-  unsigned char* une_ligne = malloc(width * 300 * sizeof(unsigned char)*bpp);
-  for(int j = 0; j < 300; j++){
-    for(int i = 0; i < width * bpp; i++)
-    {
-      *(une_ligne + i + j * width * bpp) = 123;
-    }
-  }
-
-  stbi_write_jpg("tile.jpg",cut_size,cut_size,bpp,(void*)tile,100);
-  stbi_write_jpg("recopie.jpg",width,height,bpp,(void*)recopie,100);
-  stbi_write_jpg("une_ligne.jpg",width,300,bpp,(void*)une_ligne,100);*/
-
-  //free(tile);
+  printf("Done ! The sprites are in the directory you called sprite_cutter. \n");
 }
