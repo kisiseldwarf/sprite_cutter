@@ -33,10 +33,10 @@ int main(int argc, char* argv[]){
 
 
   for(int k = 0; k < nb_cuts; k++){
-    for(int i = base; i < base+cut_size; i++)
+    for(int i = 0; i < cut_size; i++)
     {
-      for(int j = 0; j < cut_size*bpp; j++){
-        *(tile + j * sizeof(unsigned char) + (i-base) * cut_size * bpp) = *(image_or + j * sizeof(unsigned char) + i * width * bpp);
+      for(int j = base; j < base+cut_size*bpp; j++){
+        *(tile + (j-base) * sizeof(unsigned char) + i * cut_size * bpp) = *(image_or + j * sizeof(unsigned char) + i * width * bpp);
       }
     }
     base = base + cut_size * bpp;
