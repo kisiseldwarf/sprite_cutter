@@ -40,7 +40,7 @@ int main(int argc, char* argv[]){
       }
     }
     base = base + cut_size * bpp;
-    sprintf(name,"%d",k);
+    sprintf(name,"%d.jpg",k);
     stbi_write_jpg(name,cut_size,cut_size,bpp,(void*)tile,100);
   }
   free(tile);
