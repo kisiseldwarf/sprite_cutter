@@ -36,25 +36,25 @@ int main(int argc, char* argv[]){
   int base_k = 0;
   int base_l = 0;
 
-//  for(int l = 0; l < nb_row; l++)
-  //{
+  for(int l = 0; l < nb_row; l++){
 
     //cut an entire row of sprites
     for(int k = 0; k < nb_col; k++){
 
       //cut a single sprite
-      for(int i = 0; i < cut_size; i++)
+      for(int i = base_l; i < base_l+cut_size; i++)
       {
         for(int j = base_k; j < base_k+cut_size*bpp; j++){
           *(tile + (j-base_k) * sizeof(unsigned char) + (i-base_l) * cut_size * bpp) = *(image_or + j * sizeof(unsigned char) + i * width * bpp);
         }
       }
       base_k = base_k + cut_size * bpp;
-      sprintf(name,"%d.jpg",k);
+      sprintf(name,"%d-%d.jpg",l,k);
       stbi_write_jpg(name,cut_size,cut_size,bpp,(void*)tile,100);
     }
-    //base_k = 0;
-//}
+    base_k = 0;
+    base_l = base_l + cut_size;
+  }
   free(tile);
 
   /*unsigned char* recopie = malloc(height * width * sizeof(unsigned char)*bpp);
