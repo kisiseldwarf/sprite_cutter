@@ -1,11 +1,15 @@
 # sprite_cutter
 
 Sprite Cutter is a binary made to help primarily game creators to cut sprite sheet into a certain amount of sprites.
-It is destined to be simple to use.
+It is meant to be very simple to use.
 
 # How to use
 
-sprite_cutter [Source sheet] [Size of the cells]
+Use `make install` in the current directory.
+
+Then, use the binary as follows :
+
+`sprite_cutter [Source sheet] [Size of the cells]`
 
 The source sheet is the sprite sheet to cut from.
 
