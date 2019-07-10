@@ -11,9 +11,9 @@ Then, use the binary as follows :
 
 `./sprite_cutter [Source sheet] [Size of the cells]`
 
-The source sheet is the sprite sheet to cut from.
+The source sheet is the sprite sheet to cut from. (jpg or png).
 
-Size of cells is the wanted size of the sprites at the end.
+Size of cells is the wanted size of the sprites at the end. (in pixels).
 
 # Credits
 
