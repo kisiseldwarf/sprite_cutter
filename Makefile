@@ -1,2 +1,2 @@
 install:
-	gcc main.c -lm -o sprite_cutter
+	gcc main.c -lm -g -o sprite_cutter

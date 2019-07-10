@@ -2,18 +2,48 @@
 #include <math.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <ctype.h>
 #define STB_IMAGE_IMPLEMENTATION
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 #include "stb_image.h"
 #include "stb_image_write.h"
+
+int is_number(char* s)
+{
+  char* ptr = s;
+  while(*ptr != '\0'){
+    if(!isdigit(*ptr))
+      return 0;
+    ptr++;
+  }
+
+  return 1;
+}
+
+int usage()
+{
+  printf("Usage : ./sprite_cutter [Source Sheet] [Sprite size]\n");
+  printf("\t Source sheet : The sprite sheet to cut from, an jpg or png file.\n");
+  printf("\t Sprite size : The size of the sprites to be cut from the source sheet, usually a power of 2. In pixels.\n");
+}
 
 int main(int argc, char* argv[]){
   //load an image
   int width, height, bpp;
   unsigned char* image_or = stbi_load(argv[1],&width,&height,&bpp,0);
   if(image_or == NULL){
-    printf("Failed to load the sprite\n");
+    printf("Failed to load the sprite sheet.\n");
     return 1;
+  }
+
+  if(argv[2] == NULL){
+    usage();
+    return 3;
+  }
+
+  if(!is_number(argv[2])){
+    usage();
+    return 2;
   }
 
   int cut_size = atoi(argv[2]);
@@ -22,12 +52,17 @@ int main(int argc, char* argv[]){
   int nb_col = width / cut_size;
   int nb_row = height / cut_size;
 
+  if(cut_size > width || cut_size > height){
+    printf("Sprite size is too big for the source sheet.\n");
+    return 3;
+  }
+
   printf("Loaded the sprite sheet successfully\n");
   printf("Informations : \n");
   printf("\t height : %d \n", height);
   printf("\t width : %d \n", width);
   printf("\t bpp : %d \n",bpp);
-  printf("\t cut possible : %d \n", nb_cuts);
+  printf("\t sprites possible : %d \n", nb_cuts);
   printf("\t number of columns : %d \n", nb_col);
   printf("\t number of rows : %d \n", nb_row);
 
