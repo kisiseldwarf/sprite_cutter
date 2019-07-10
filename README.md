@@ -1,4 +1,4 @@
-# sprite_cutter
+# Sprite Cutter
 
 Sprite Cutter is a binary made to help primarily game creators to cut sprite sheet into a certain amount of sprites.
 It is meant to be very simple to use.
