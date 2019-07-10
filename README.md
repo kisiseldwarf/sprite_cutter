@@ -11,13 +11,13 @@ Then, use the binary as follows :
 
 `./sprite_cutter [Source sheet] [Sprite size]`
 
-The source sheet is the sprite sheet to cut from. (jpg or png).
+ * The source sheet is the sprite sheet to cut from. (jpg or png).
 
-The Sprite size is the wanted size of the sprites at the end. (in pixels, and usually a power of 2 like 32, 64 or 128).
+ * The Sprite size is the wanted size of the sprites at the end. (in pixels, and usually a power of 2 like 32, 64 or 128).
 
-Sprite Cutter will then cut the source sheets in image of *sprite_size\*sprite_size* pixels, in the form of png files.
+Sprite Cutter will then cut the source sheets in image of **sprite_size\*sprite_size** pixels, in the form of **png files**.
 
-Their names will be composed with two numbers, like *1-0.png*. The first number is the number of the row the sprite were at, and the second its column.
+Their names will be composed with two numbers, like **1-0.png**. The first number is the number of the row the sprite were at, and the second its column.
 
 The files will be created in the same directory you called sprite_cutter.
 
