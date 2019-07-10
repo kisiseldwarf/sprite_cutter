@@ -17,7 +17,7 @@ Then, use the binary as follows :
 
 Sprite Cutter will then cut the source sheets in image of **sprite_size\*sprite_size** pixels, in the form of **png files**.
 
-Their names will be composed with two numbers, like **1-0.png**. The first number is the number of the row the sprite was at, and the second its column.
+Their names will be composed with two numbers, like **1-0.png**. The first number is the index of the row the sprite was at, and the second its column.
 
 The files will be created in the same directory you called sprite_cutter.
 
