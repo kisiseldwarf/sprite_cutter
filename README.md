@@ -13,7 +13,7 @@ Then, use the binary as follows :
 
  * The source sheet is the sprite sheet to cut from. (jpg or png).
 
- * The Sprite size is the wanted size of the sprites at the end. (in pixels, and usually a power of 2 like 32, 64 or 128).
+ * The Sprite size is the wanted size of the sprites in the end. (in pixels, and usually a power of 2 like 32, 64 or 128).
 
 Sprite Cutter will then cut the source sheets in image of **sprite_size\*sprite_size** pixels, in the form of **png files**.
 
