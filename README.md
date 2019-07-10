@@ -9,11 +9,11 @@ Use `make install` in the current directory.
 
 Then, use the binary as follows :
 
-`./sprite_cutter [Source sheet] [Size of the cells]`
+`./sprite_cutter [Source sheet] [Sprite size]`
 
 The source sheet is the sprite sheet to cut from. (jpg or png).
 
-Size of cells is the wanted size of the sprites at the end. (in pixels).
+The Sprite size is the wanted size of the sprites at the end. (in pixels, and usually a power of 2 like 32, 64 or 128).
 
 # Credits
 
