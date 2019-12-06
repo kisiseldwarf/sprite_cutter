@@ -1,2 +1,9 @@
+SRC=src/
+OPT=-lm -g
+EXEC=sprite_cutter
+
 install:
-	gcc main.c -lm -g -o sprite_cutter
+	gcc $(SRC)main.c $(OPT) -o $(EXEC)
+
+clean:
+	rm $(EXEC)

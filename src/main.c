@@ -5,8 +5,8 @@
 #include <ctype.h>
 #define STB_IMAGE_IMPLEMENTATION
 #define STB_IMAGE_WRITE_IMPLEMENTATION
-#include "stb_image.h"
-#include "stb_image_write.h"
+#include "../lib/stb_image.h"
+#include "../lib/stb_image_write.h"
 
 int is_number(char* s)
 {
@@ -30,6 +30,12 @@ int usage()
 int main(int argc, char* argv[]){
   //load an image
   int width, height, bpp;
+
+  if(argc < 2){
+    usage();
+    return 1;
+  }
+  
   unsigned char* image_or = stbi_load(argv[1],&width,&height,&bpp,0);
   if(image_or == NULL){
     printf("Failed to load the sprite sheet.\n");
