@@ -5,6 +5,7 @@
 #include <ctype.h>
 #define STB_IMAGE_IMPLEMENTATION
 #define STB_IMAGE_WRITE_IMPLEMENTATION
+#define NAME_BUF 10
 #include "../lib/stb_image.h"
 #include "../lib/stb_image_write.h"
 
@@ -35,7 +36,7 @@ int main(int argc, char* argv[]){
     usage();
     return 1;
   }
-  
+
   unsigned char* image_or = stbi_load(argv[1],&width,&height,&bpp,0);
   if(image_or == NULL){
     printf("Failed to load the sprite sheet.\n");
@@ -73,7 +74,7 @@ int main(int argc, char* argv[]){
   printf("\t number of rows : %d \n", nb_row);
 
   unsigned char* tile = malloc(cut_size * cut_size * sizeof(unsigned char)*bpp);
-  char name[10];
+  char name[NAME_BUF];
   int base_k = 0;
   int base_l = 0;
 
